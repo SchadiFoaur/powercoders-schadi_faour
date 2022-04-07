@@ -1,0 +1,10 @@
+This is a labrinth of riddles. 
+Solve the riddles to move up.
+There is a surprise at the end!!!!!
+No money rewards!!!!!!!!!!!!!
+
+
+Use ls to get a list of items.
+Use cd to move
+Use cat to interact with files
+Use cd .. to move up one
