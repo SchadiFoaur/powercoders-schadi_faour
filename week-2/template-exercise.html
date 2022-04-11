@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template</title>
+  </head>
+  <body>
+    <h1>Profil</h1>
+    <h2>Hier können Sie Ihre Adress-Angaben einsehen und anpassen.</h2>
+    <hr />
+    <form action="#" name="persönliche-daten" method="post">
+      <section>
+        <h3>Persönliche Daten</h3>
+        <label for="titel">Titel</label>
+        <input type="text" id="titel" name="titel" placeholder="Dr.hc" />
+        <br /><br />
+        <label for="fname">Vorname</label>
+        <input
+          type="text"
+          id="fname"
+          name="fname"
+          placeholder="PETER"
+        /><br /><br />
+        <label for="lname">Nachname</label>
+        <input type="text" id="lname" name="lname" placeholder="Muster" />
+        <br /><br />
+        <!-- Not sure if fieldset is appropriate here -->
+        <!-- <fieldset> -->
+        <label>Geschlecht</label>
+        <label for="männlich">M</label>
+        <input type="radio" id="männlich" name="gesh" value="m" />
+        <label for="weiblich">W</label>
+        <input type="radio" id="weiblich" name="gesh" value="w" />
+        <!-- </fieldset> -->
+        <br /><br />
+        <!-- same not sure if field set is required here -->
+        <!-- <fieldset> -->
+        <label>Sprache</label>
+        <label for="deutsch">DE</label>
+        <input type="radio" id="deutsch" name="sprache" />
+        <label for="fr">FR</label>
+        <input type="radio" name="sprache" id="fr" />
+        <label for="it">IT</label>
+        <input type="radio" name="sprache" id="it" />
+        <!-- </fieldset> -->
+        <br /><br />
+      </section>
+      <hr />
+      <section>
+        <h3>Kontaktdaten</h3>
+        <label for="phone">Telefone</label>
+        <input type="tel" name="phone" id="phone" /> <br /><br />
+        <label for="mob">Mobile</label>
+        <input type="tel" name="mob" id="mob" placeholder="optional" />
+        <br /><br />
+        <label for="hphone">Hauptnummer</label>
+        <input
+          type="tel"
+          name="hphone"
+          id="hphone"
+          placeholder="optional"
+        /><br /><br />
+        <label for="fx">Fax</label>
+        <input type="tel" name="fx" id="fx" /> <br />
+        <br />
+        <label for="mail">Mail 1</label>
+        <input type="email" id="mail" name="mail" /> <br /><br />
+        <label for="mail2">Mail 2</label>
+        <input type="email" id="mail2" name="mail2" placeholder="optional" />
+        <br /><br />
+      </section>
+      <hr />
+      <section>
+        <h3>Adressdaten</h3>
+        <label for="fir">Firma</label>
+        <input type="text" id="fir" name="fir" /> <br />
+        <br />
+        <label for="zfir">Zusatz Firma</label>
+        <input type="text" id="zfir" name="zfir" placeholder="optional" />
+        <br />
+        <br />
+        <label for="homepage">Homepage</label>
+        <input
+          type="url"
+          id="homepage"
+          name="homepage"
+          placeholder="optional"
+        />
+        <br />
+        <br />
+        <label for="haus">Adresse/ Haus Nr</label>
+        <input type="text" id="haus" name="haus" placeholder="Musterstrasse" />
+        <input type="number" name="haus" placeholder="33" />
+        <br /><br />
+        <label for="zhaus">Zusatz Adresse</label>
+        <input type="text" name="zhaus" id="zhaus" placeholder="optional" />
+        <br /><br />
+        <label for="postfach">Postfach</label>
+        <input type="text" name="postfach" id="postfach" /> <br /><br />
+        <label for="plz">PLZ / Ort</label>
+        <input type="number" name="plz" id="plz" />
+        <input type="text" name="plz" /> <br />
+        <br />
+        <label for="land">Kanton / Land</label>
+        <input type="text" id="land" name="land" placeholder="ZH" />
+        <input type="text" name="land" placeholder="Schweiz" />
+        <br /><br />
+      </section>
+      <input type="submit" value="Speichern" />
+    </form>
+  </body>
+</html>
