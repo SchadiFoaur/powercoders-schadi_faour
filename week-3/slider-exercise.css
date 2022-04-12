@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  font-size: larger;
+}
+
+.slider {
+  display: flex;
+  height: 80vh;
+  list-style: none;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  transition: 0.5s ease-in;
+}
+.slider li {
+  color: #dbdbdb;
+  font-size: 500px;
+  flex-shrink: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.purple {
+  background-color: #348888;
+}
+.green {
+  background-color: #22babb;
+}
+.maginta {
+  background-color: #9ef8ee;
+}
+.blue {
+  background-color: #fa7f08;
+}
+.yellow {
+  background-color: #f24405;
+}
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  margin-top: 50px;
+}
