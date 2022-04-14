@@ -4,20 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="/week-3/navigation-exercise.js" defer></script>
+    <!-- <script src="/week-3/navigation-exercise.js" defer></script> -->
     <title>Navigation</title>
     <link rel="stylesheet" href="/week-3/navigation-exercise.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
   </head>
   <body>
-    <nav>
-      <div class="icon" id="icon"><span></span><span></span><span></span></div>
-      <ul id="menu" class="active">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Work</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contact</a></li>
+    <section class="top-nav">
+      <input id="menu-toggle" type="checkbox" />
+      <label class="menu-button-container" for="menu-toggle">
+        <div class="menu-button"></div>
+      </label>
+      <ul class="menu">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+        <li>Four</li>
+        <li>Five</li>
       </ul>
-    </nav>
+    </section>
   </body>
 </html>
