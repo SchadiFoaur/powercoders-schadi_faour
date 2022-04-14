@@ -2,7 +2,7 @@
 
 // Can they all make it to the other side if they have a torch that lasts only 12 minutes and they are afraid of the dark?
 
-// solution 1
+// solution 1 maybe
 // put the daughter in the front
 // put the mom in the second position
 // put the daughter in the third position
@@ -25,6 +25,8 @@
 // INPUT speedDad = 1 min
 // INPUT speedMom = 2 min
 // INPUT speedDaughter = 5 min
+// INPUT start point = initial position
+// INPUT end point = end
 // INITIALIZE speedDad + speedMom = 2 min
 // OUTPUT speedMom + speedDad = end point
 // INITIALIZE speedDad = 1 min
@@ -38,4 +40,4 @@
 // end
 
 // solution 3
-// Don't walk through the tunnel
+// Don't walk through the suspicious tunnel
