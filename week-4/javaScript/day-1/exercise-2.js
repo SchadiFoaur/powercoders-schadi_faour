@@ -1,3 +1,4 @@
+// @ts-check
 const birth = 2002;
 let futureDate = 2070;
 let age = futureDate - birth;
