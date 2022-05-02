@@ -1,6 +1,8 @@
-//@ts-check
 /** declare list of authors based on img names
- * check for special characters in names and for more than one first/last name
+ *
+ * to do.
+ * check special characters in name,
+ * check what happens with several first names or several last names
  */
 let authors = [
   {
@@ -9,6 +11,10 @@ let authors = [
   },
   {
     firstName: "Anna",
+    lastName: "Ruchat",
+  },
+  {
+    firstName: "Arno",
     lastName: "Camenisch",
   },
   {
@@ -32,7 +38,7 @@ let authors = [
     lastName: "Hartmann",
   },
   {
-    firstName: "Marius Daniel",
+    firstName: "Marius",
     lastName: "Popescu",
   },
   {
@@ -40,7 +46,7 @@ let authors = [
     lastName: "Haenny",
   },
   {
-    firstName: "Sandara",
+    firstName: "Sandra",
     lastName: "Kuenzi",
   },
   {
@@ -48,37 +54,37 @@ let authors = [
     lastName: "Libsig",
   },
 ];
-
 /** create object per author */
-
 let Author = function (firstName, lastName) {
   this.firstName = firstName;
   this.lastName = lastName;
   this.imgUrl = `img/tile_${firstName.toLowerCase()}_${lastName.toLowerCase()}.jpg`;
   this.altText = `Portrait of ${firstName} ${lastName}`;
-  this.link = `authors/${firstName.toLowerCase()}-${
-    lastName.toLowerCase().html
-  }`;
+  this.link = `authors/${firstName.toLowerCase()}-${lastName.toLowerCase()}.html`;
 };
 
-/** create function createTiles to create masonry tiles */
-
+/** create function createTiles to create list items
+ * 
+<li>
+    <a href="authors/andreas-neeser.html">
+        <img src="img/tile_andreas_neeser.jpg" alt="Portrait of Andreas Neeser">
+        <h2>Andreas Neeser</h2>
+    </a>
+</li>
+*/
 function createTiles(authors) {
   let tileList = [];
   authors.forEach((author) => {
     const currentAuthor = new Author(author.firstName, author.lastName);
     const liTag = document.createElement("li");
-    tileList.push();
     const aTag = document.createElement("a");
-    tileList.push();
     const imgTag = document.createElement("img");
-    tileList.push();
     const h2Tag = document.createElement("h2");
 
     aTag.href = currentAuthor.link;
     imgTag.src = currentAuthor.imgUrl;
     imgTag.alt = currentAuthor.altText;
-    h2Tag.textContent = currentAuthor.firstName + "" + currentAuthor.lastName;
+    h2Tag.textContent = currentAuthor.firstName + " " + currentAuthor.lastName;
 
     liTag.appendChild(aTag);
     aTag.appendChild(imgTag);
@@ -88,8 +94,29 @@ function createTiles(authors) {
   });
   return tileList;
 }
-console.log(authors);
 
 /** create function addTiles to add all tiles to the DOM randomly */
+function addTiles(list) {
+  const ulTag = document.querySelector("main ul");
+  /** randomize list first */
+  list = randomize(list);
+  list.forEach((li) => ulTag.appendChild(li));
+}
 
-/** add a eventListener on the logo to rebuild the list on click */
+// tempList
+function randomize(list) {
+  let randomNumber = 0;
+  let tempList = [];
+  list.forEach((item) => {
+    do {
+      randomNumber = Math.floor(Math.random() * list.length);
+    } while (tempList[randomNumber] !== undefined);
+
+    tempList[randomNumber] = item;
+  });
+  return tempList;
+}
+
+addTiles(createTiles(authors));
+
+/** add an eventListener on the logo to rebuild the list on click */
