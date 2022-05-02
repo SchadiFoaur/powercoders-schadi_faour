@@ -80,15 +80,18 @@ function createTiles(authors) {
     const aTag = document.createElement("a");
     const imgTag = document.createElement("img");
     const h2Tag = document.createElement("h2");
+    const spanTag = document.createElement("span");
 
     aTag.href = currentAuthor.link;
     imgTag.src = currentAuthor.imgUrl;
     imgTag.alt = currentAuthor.altText;
-    h2Tag.textContent = currentAuthor.firstName + " " + currentAuthor.lastName;
+    spanTag.textContent =
+      currentAuthor.firstName + " " + currentAuthor.lastName;
 
     liTag.appendChild(aTag);
     aTag.appendChild(imgTag);
     aTag.appendChild(h2Tag);
+    h2Tag.appendChild(spanTag);
 
     tileList.push(liTag);
   });
@@ -120,3 +123,9 @@ function randomize(list) {
 addTiles(createTiles(authors));
 
 /** add an eventListener on the logo to rebuild the list on click */
+
+let logo = document.querySelector("#logo");
+logo.addEventListener("click", () => {
+  randomize();
+  console.log("fixed");
+});
