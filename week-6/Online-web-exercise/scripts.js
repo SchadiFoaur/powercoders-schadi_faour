@@ -126,6 +126,8 @@ addTiles(createTiles(authors));
 
 let logo = document.querySelector("#logo");
 logo.addEventListener("click", () => {
-  randomize();
-  console.log("fixed");
+  let random2 = randomize();
+  let temp2 = createTiles();
+  random2 = temp2;
+  console.log("random2");
 });
