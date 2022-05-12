@@ -37,7 +37,7 @@ let todos = [];
 
 // check for duplicate entries
 let isInputUnique = (newItem) => {
-  // loop through the todos and compare each item to newItem
+  // loop through the todos and compare each item to newItem~
   // if one item is equal to newItem > return false
   // else > return true
 };
